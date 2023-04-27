@@ -6,6 +6,7 @@
 
 body{
   background-color: black;
+  background-image: url(https://t4.ftcdn.net/jpg/02/43/75/73/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg);
 }
 
 /*Nav-bar*/
@@ -26,6 +27,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     color: black;
+    margin-top: 0%;
      
     display: flex;
     justify-content: flex-end;
@@ -197,6 +199,13 @@ body{
   border-radius: 10px;
   padding: 35px;
 }
+
+.footer_teste{
+  background-color: black;
+  height: 15vh;
+  border-top: white solid;
+  margin-bottom: 0%;
+}
 /*Fim conteudo*/
 
 /*Footer*/
@@ -208,9 +217,6 @@ body{
 }
 
 .container_footer{
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-top: 1%;
   display: flex;
   justify-content: center;
   
