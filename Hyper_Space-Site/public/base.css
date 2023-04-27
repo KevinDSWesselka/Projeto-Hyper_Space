@@ -200,6 +200,34 @@ body{
 /*Fim conteudo*/
 
 /*Footer*/
+#footer {
+  height: 50px;
+  border-top: white solid;
+  color: white;
+  margin-bottom: 5%;
+}
 
+.container_footer{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  
+}
 
+.container_footer img {
+  height: 45px;
+  margin: 10px;
+}
+
+.container_footer a {
+  text-decoration: none;
+}
+
+#footer p {
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+}
 
