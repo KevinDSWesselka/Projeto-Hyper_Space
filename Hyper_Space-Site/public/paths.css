@@ -119,6 +119,13 @@ color: black;
 }
 
 .opicao_quiz:hover{
-  background-color: rgb(189, 189, 189);
+  background-color: rgb(230, 230, 230);
   transition: 1s;
+}
+
+.resposta_final{
+  width: 95.65%;
+  background-color: rgb(230, 230, 230);
+  padding: 25px;
+  margin: 15px 0 0 0;
 }
