@@ -24,14 +24,25 @@
     <div id="conteudo">
       <div id="container">
           <h1>HYPER-SPACE</h1>
-          <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nostrum illum velit, libero dolores mollitia quasi laboriosam vel saepe optio aut eveniet obcaecati iste vero voluptatibus reiciendis tempore cum. Quasi!
-              Error ducimus molestias eos recusandae consequatur ipsam, magni vero soluta. Dignissimos eum asperiores magnam voluptatum fugit itaque sequi corporis nam earum. Nulla fugiat quidem sed dolores rem architecto, illo totam! 
-              Sunt sapiente sit voluptas ad quibusdam, fugit corrupti nostrum minus! Optio aperiam fugiat id voluptates expedita veniam. Fugit accusamus fugiat sapiente necessitatibus quis veniam, neque error dolorum iusto est perspiciatis?
-              Exercitationem, consequatur molestias dolorem, iusto tempore incidunt adipisci, illo non officia maxime ratione delectus fuga architecto ipsum? Repellat magnam itaque, molestias eaque odit non consectetur sunt id! Aspernatur, dolorem quo.
-               Rerum excepturi quia sed veritatis! Repellendus incidunt labore mollitia consequuntur exercitationem fugit voluptatem. Temporibus a dolorem vitae eum? Voluptatem aliquam fugiat minima nobis et, in dignissimos vero maxime blanditiis quo?
-          </p>
+          <div class="filtro_quiz">
+            <div class="titulo_quiz">
+              O que você faria se soubesse que seu amigo te traiu
+            </div>
+          </div>
+            <img class="img_quiz" src="https://www.broadway.org.uk/sites/default/files/styles/banner_crop/public/2019-10/star-wars-the-rise-of-skywalker-banner-min.jpg?h=639d4ef1&itok=z4KZ-3Tt" alt="">
       </div>
+        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+        </div>
+        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
+          Resposta 2
+        </div>
+        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
+          Resposta 3
+        </div>
+        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
+          Resposta 4
+        </div>
   </div>
 
     <div class="footer_teste">
@@ -56,6 +67,98 @@
 
 <script>
 
+  var jedi_por_cen = 0;
+  var sith_por_cen = 0;
+  var contador_quiz = 0;
 
+  var altera_quiz = [
+
+  `
+    <div id="container">
+          <h1>HYPER-SPACE</h1>
+          <div class="filtro_quiz">
+            <div class="titulo_quiz">
+              TITULO QUIZ
+            </div>
+          </div>
+            <img class="img_quiz" src="https://img.elo7.com.br/product/original/2169463/banner-painel-star-wars-3x2m-festa-aniversario.jpg" alt="">
+      </div>
+        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
+          Resposta 2
+        </div>
+        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+        </div>
+        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
+          Resposta 3
+        </div>
+        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
+          Resposta 4
+        </div>
+    `,
+
+    `
+    <div id="container">
+          <h1>HYPER-SPACE</h1>
+          <div class="filtro_quiz">
+            <div class="titulo_quiz">
+              TITULO QUIZ
+            </div>
+          </div>
+            <img class="img_quiz" src="https://i.redd.it/l3fya3oustw41.jpg" alt="">
+      </div>
+        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
+          Resposta 2
+        </div>
+        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
+          Resposta 3
+        </div>
+        <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
+          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+        </div>
+        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
+          Resposta 4
+        </div>
+    `,
+
+    `
+    <div id="container">
+          <h1>HYPER-SPACE</h1>
+          <div class="filtro_quiz">
+            <div class="titulo_quiz">
+              TITULO QUIZ
+            </div>
+          </div>
+            <img class="img_quiz" src="https://milnersblog.files.wordpress.com/2020/02/star-wars-the-high-republic-light-of-the-jedi-textless-banner.jpg" alt="">
+      </div>
+        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
+          Resposta 2
+        </div>
+        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
+          Resposta 3
+        </div>
+        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
+          Resposta 4
+        </div>
+        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+        </div>
+    `
+  ]
+
+  function opicao_jedi() {
+    jedi_por_cen++
+    console.log((jedi_por_cen * 10) + "% jedi")
+  }
+
+  function opicao_sith(){
+    sith_por_cen++
+    console.log((sith_por_cen * 10) + "% sith")
+  }
+
+  function proxima_opicao(){
+    conteudo.innerHTML = altera_quiz[contador_quiz];
+    contador_quiz++
+  }
 
 </script>
