@@ -1,365 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt_br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/base.css">
-    <link rel="stylesheet" href="./public/paths.css">
-    <link rel="shortcut icon" href="https://img.icons8.com/color/512/star-wars.png"/>
-    <title>Hyper-Space | Home</title>
-</head>
-<body>
-        <div class="nav_bar_paths">
-            <ul>
-                 <li><a href="./index.html">Home</a></li>
-                 <li><a href="">Hyper Space</a></li>
-                 <li><a id="link_select" href="">Paths of the Force</a></li>
-                 <li><a href="">Sing-in</a></li>
-                 <li><a href="">Log-in</a></li>
-            </ul>
-        </div>
-    </div>
 
-    <!--
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assest/css/paths.css">
+  <link rel="stylesheet" href="./assest/css/base.css">
+  <script type="text/javascript" src=".//assest/css/js/quiz.js"></script>
+  <link rel="shortcut icon" href="https://img.icons8.com/color/512/star-wars.png"/>
+  <script ></script>
+
+  <title>Hyper-Space | Home</title>
+</head>
+
+<body>
+  <div class="nav_bar_paths">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="">Hyper Space</a></li>
+      <li><a id="link_select" href="">Paths of the Force</a></li>
+      <li><a href="">Sing-in</a></li>
+      <li><a href="">Log-in</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <!--
        <div class="invizivel">
       a
     </div>
     -->
-    <div id="conteudo">
-      <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              O que você faria se soubesse que seu amigo te traiu
-            </div>
-          </div>
-            <img class="img_quiz" src="https://www.broadway.org.uk/sites/default/files/styles/banner_crop/public/2019-10/star-wars-the-rise-of-skywalker-banner-min.jpg?h=639d4ef1&itok=z4KZ-3Tt" alt="">
+  <div id="conteudo">
+    <div id="container">
+      <h1>HYPER-SPACE</h1>
+      <div class="filtro_quiz">
+        <div class="titulo_quiz">
+          O que você faria se soubesse que seu amigo te traiu
+        </div>
       </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-
+      <img class="img_quiz"
+        src="https://www.broadway.org.uk/sites/default/files/styles/banner_crop/public/2019-10/star-wars-the-rise-of-skywalker-banner-min.jpg?h=639d4ef1&itok=z4KZ-3Tt"
+        alt="">
+    </div>
+    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
+      Sith
+    </div>
+    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+    </div>
+    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
+      Sith
+    </div>
+    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
+    </div>
   </div>
 
-    <div class="footer_teste">
-        <div class="container_footer">
-          <a href="https://www.linkedin.com/in/kevin-s-wesselka-systems-developer/">
-            <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-512.png" alt="">
-          </a>
-          <a href="https://github.com/KevinDSWesselka">
-            <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/">
-            <img src="https://cpaq.ufms.br/files/2022/03/Instagram-logo-free-download-PNG-e1647376733700.png" alt="">
-          </a>
-        </div>
-         <p>   
-            Star Wars - Hyper Space™
-        </p>
-      </div>
+  <div class="footer_teste">
+    <div class="container_footer">
+      <a href="https://www.linkedin.com/in/kevin-s-wesselka-systems-developer/">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-512.png"
+          alt="">
+      </a>
+      <a href="https://github.com/KevinDSWesselka">
+        <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="https://cpaq.ufms.br/files/2022/03/Instagram-logo-free-download-PNG-e1647376733700.png" alt="">
+      </a>
+    </div>
+    <p>
+      Star Wars - Hyper Space™
+    </p>
+  </div>
 
 </body>
+
 </html>
-
-<script>
-
-  var jedi_por_cen = 0;
-  var sith_por_cen = 0;
-  var contador_quiz = 0;
-
-  var altera_quiz = [
-
-  `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://img.elo7.com.br/product/original/2169463/banner-painel-star-wars-3x2m-festa-aniversario.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="proxima_opicao(); opicao_sith()">
-          Resposta 2
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://i.redd.it/l3fya3oustw41.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://milnersblog.files.wordpress.com/2020/02/star-wars-the-high-republic-light-of-the-jedi-textless-banner.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="proxima_opicao(); opicao_sith()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://meups.com.br/wp-content/uploads/2021/05/Star-Wars-Jedi-Fallen-Order.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2020/07/star-wars-1-scaled.jpg" alt="">
-      </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="proxima_opicao(); opicao_sith()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://wallpapercave.com/wp/1Nyv4Mp.jpg" alt="">
-      </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://cdn.wallpapersafari.com/74/20/u3XqmH.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="proxima_opicao(); opicao_sith()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttAiXd5iyozi0WeGe2oHyzd-8MQVq_jxBcuwZ2RAslq2Yqv0D3BfAQadDQoLHeFDmhEQ&usqp=CAU" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="opicao4()">
-          Resposta 4
-        </div>
-    `,
-
-    `
-    <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://wallpaperaccess.com/full/2828950.jpg" alt="">
-      </div>
-        <div id="opicao_2" class="opicao_quiz" onclick="opicao2()">
-          Resposta 2
-        </div>
-        <div id="opicao_1" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-          Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-        </div>
-        <div id="opicao_3" class="opicao_quiz" onclick="opicao3()">
-          Resposta 3
-        </div>
-        <div id="opicao_4" class="opicao_quiz" onclick="proxima_opicao(); opicao_sith()">
-          Resposta 4
-        </div>
-    `
-  ]
-
-  function opicao_jedi() {
-    jedi_por_cen++
-    console.log((jedi_por_cen * 10) + "% jedi")
-  }
-
-  function opicao_sith(){
-    sith_por_cen++
-    console.log((sith_por_cen * 10) + "% sith")
-  }
-  function proxima_opicao(){
-    conteudo.innerHTML = altera_quiz[contador_quiz];
-    contador_quiz++
-
-    if (contador_quiz == 10 && jedi_por_cen > sith_por_cen){
-      conteudo.innerHTML = `
-      <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://i.pinimg.com/originals/86/fe/89/86fe8981b049d62502fed2db5f092ed7.jpg" alt="">
-            <div class="resposta_final">
-          <h1>JEDI ORDER</h1>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, laboriosam. Corporis ratione placeat impedit delectus consequatur, adipisci aliquam tempore corrupti quibusdam explicabo dolorem officia ut veniam omnis quisquam laborum? Quasi.
-          Eveniet officiis accusantium, dolore tempora explicabo magni, ullam adipisci facilis ducimus eius necessitatibus laudantium. Animi sed sequi officiis voluptatibus aliquid odit consectetur sapiente dolor voluptate repudiandae atque laborum, dignissimos corporis!
-          Nemo porro delectus facere magnam nobis ullam, ea perspiciatis. Ab obcaecati voluptatem dicta. Voluptas sapiente dolor doloremque deleniti commodi earum velit expedita. Officiis, enim illum vel molestias quod a? Odio.
-          Eos eius ipsam tempore enim deserunt maxime nostrum fugit sequi, reprehenderit aliquid nobis! Minus odio, eligendi ad voluptates aperiam deserunt a nemo rem, perferendis repellat beatae cumque architecto laborum atque.
-          Cupiditate ullam est minima. Quod quos ducimus consequuntur repellat aperiam suscipit maiores rerum repudiandae inventore, et voluptatum laudantium molestiae hic accusamus incidunt unde fugiat veniam atque nostrum. Vitae, voluptates nihil.
-          Dignissimos accusantium consequatur, placeat hic dolor eveniet perferendis beatae at aliquam explicabo atque optio molestiae amet temporibus! Neque facere consequatur earum possimus odio quos! Dolor obcaecati placeat explicabo hic expedita.
-          Qui, ea. In atque nemo placeat facilis suscipit distinctio sed blanditiis eum vel exercitationem quisquam, amet at veniam, ad vitae tempora debitis culpa asperiores excepturi aperiam? Voluptas adipisci cum velit?
-          Aperiam quibusdam fuga quia libero earum, nisi ipsam exercitationem consequuntur laboriosam cupiditate doloremque autem assumenda consectetur esse quis, tenetur rem ipsa ad minus quo! Nulla aspernatur corporis voluptatum amet dolore!
-          Nihil ipsa repudiandae illum maiores distinctio, culpa dolore doloremque quam, quae ut autem sed architecto consequatur? Atque impedit delectus enim excepturi mollitia id nihil corporis ex, sapiente doloribus ipsam officia!
-          Nobis ipsam accusantium, delectus aut totam sint eos aperiam numquam in possimus iste accusamus facilis porro. Corporis consequatur esse distinctio minus rem aspernatur reiciendis impedit possimus? Porro, aut. Nihil, minus!
-          <a href="./paths.html">Tente novamente</a>
-        </div>
-      `
-    } else if(contador_quiz == 10 && sith_por_cen > jedi_por_cen) {
-      conteudo.innerHTML = `
-      <div id="container">
-          <h1>HYPER-SPACE</h1>
-          <div class="filtro_quiz">
-            <div class="titulo_quiz">
-              TITULO QUIZ
-            </div>
-          </div>
-            <img class="img_quiz" src="https://media.moddb.com/images/groups/1/7/6367/swtor-empire-set-by-morie-torwars-343693.jpg" alt="">
-            <div class="resposta_final">
-          <h1>SITH ORDER</h1>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, laboriosam. Corporis ratione placeat impedit delectus consequatur, adipisci aliquam tempore corrupti quibusdam explicabo dolorem officia ut veniam omnis quisquam laborum? Quasi.
-          Eveniet officiis accusantium, dolore tempora explicabo magni, ullam adipisci facilis ducimus eius necessitatibus laudantium. Animi sed sequi officiis voluptatibus aliquid odit consectetur sapiente dolor voluptate repudiandae atque laborum, dignissimos corporis!
-          Nemo porro delectus facere magnam nobis ullam, ea perspiciatis. Ab obcaecati voluptatem dicta. Voluptas sapiente dolor doloremque deleniti commodi earum velit expedita. Officiis, enim illum vel molestias quod a? Odio.
-          Eos eius ipsam tempore enim deserunt maxime nostrum fugit sequi, reprehenderit aliquid nobis! Minus odio, eligendi ad voluptates aperiam deserunt a nemo rem, perferendis repellat beatae cumque architecto laborum atque.
-          Cupiditate ullam est minima. Quod quos ducimus consequuntur repellat aperiam suscipit maiores rerum repudiandae inventore, et voluptatum laudantium molestiae hic accusamus incidunt unde fugiat veniam atque nostrum. Vitae, voluptates nihil.
-          Dignissimos accusantium consequatur, placeat hic dolor eveniet perferendis beatae at aliquam explicabo atque optio molestiae amet temporibus! Neque facere consequatur earum possimus odio quos! Dolor obcaecati placeat explicabo hic expedita.
-          Qui, ea. In atque nemo placeat facilis suscipit distinctio sed blanditiis eum vel exercitationem quisquam, amet at veniam, ad vitae tempora debitis culpa asperiores excepturi aperiam? Voluptas adipisci cum velit?
-          Aperiam quibusdam fuga quia libero earum, nisi ipsam exercitationem consequuntur laboriosam cupiditate doloremque autem assumenda consectetur esse quis, tenetur rem ipsa ad minus quo! Nulla aspernatur corporis voluptatum amet dolore!
-          Nihil ipsa repudiandae illum maiores distinctio, culpa dolore doloremque quam, quae ut autem sed architecto consequatur? Atque impedit delectus enim excepturi mollitia id nihil corporis ex, sapiente doloribus ipsam officia!
-          Nobis ipsam accusantium, delectus aut totam sint eos aperiam numquam in possimus iste accusamus facilis porro. Corporis consequatur esse distinctio minus rem aspernatur reiciendis impedit possimus? Porro, aut. Nihil, minus!
-          <a href="./paths.html">Tente novamente</a>
-        </div>
-      `
-    }
-  }
-
-</script>
