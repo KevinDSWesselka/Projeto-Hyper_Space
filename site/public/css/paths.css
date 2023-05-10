@@ -141,3 +141,11 @@ color: black;
   height: 19vh;
   background-color: rgba(0, 0, 0, 0.220);
 }
+
+.filtro_img{
+  background-color: black;
+}
+
+.filtro_img img {
+  filter: opacity(40%);
+}
