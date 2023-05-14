@@ -1,0 +1,16 @@
+INSERT INTO tb_cliente (nome_cliente, email_cliente, rua, bairro) VALUES
+
+    (null, 'João Silva', 'joao.silva@gmail.com', 'Rua das Flores', 'Centro'),
+    (null, 'Maria Souza', 'maria.souza@gmail.com', 'Rua dos Pinheiros', 'Jardim', 1),
+    (null, 'Pedro Rodrigues', 'pedro.rodrigues@gmail.com', 'Rua das Árvores', 'Vila'),
+    (null, 'Ana Costa', 'ana.costa@gmail.com', 'Rua dos Girassóis', 'Parque', 1),
+    (null, 'Lucas Fernandes', 'lucas.fernandes@gmail.com', 'Rua das Palmeiras', 'Bela Vista');
+
+
+
+    insert into tb_produto values
+       (null, 'Camisa', 'Camisa de algodão', 50.00),
+       (null, 'Calça', 'Calça jeans', 80.50),
+       (null, 'Tênis', 'Tênis esportivo', 120.00),
+       (null, 'Saia', 'Saia longa', 60.00),
+       (null, 'Short', 'Short jeans', 40.00);

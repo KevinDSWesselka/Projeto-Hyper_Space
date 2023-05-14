@@ -329,5 +329,5 @@ function proxima_opicao() {
     `
     }
     console.log((sith_por_cen * 10) + "% sith", (jedi_por_cen * 10) + "% jedi");
-    console.log((contador_quiz * 10) + "% do quiz completo")
+    console.log((contador_quiz * 10) + "% do quiz completo");
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Cadastro</title>
+    <title>Hyper-Space | Cadastro</title>
 
 
     <script src="./js/funcoes.js"></script>
@@ -31,23 +31,24 @@
     </ul>
   </div>
   </div>
+  
 
-  <!--
-       <div class="invizivel">
-      a
-    </div>
-    -->
-  <div id="conteudo">
+  <div id="conteudo_login">
     <div id="container">
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
+        
+        <div class="login">
+            <div class="filtro_img_login">
+                <img src="https://images2.alphacoders.com/100/1006252.jpg" alt="">
         </div>
-        <div class="container">
-            <div class="card card-cadastro">
-                <h2>Bem-vindo!</h2>
+
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card card-login">
+                    <h2>Bem-vindo!</h2>
                 <div class="formulario">
 
                     <!--
@@ -58,14 +59,6 @@
                     <div class="campo">
                         <span>Nome:</span>
                         <input id="nome_input" type="text" placeholder="Seu nome">
-                    </div>
-                    <div class="campo">
-                        <span>CPF:</span>
-                        <input maxlength="14" id="cpf_input" type="text" placeholder="11111111111111">
-                    </div>
-                    <div class="campo">
-                        <span>Telfone:</span>
-                        <input maxlength="12" id="telefone_input" type="text" placeholder="11944444444">
                     </div>
                     <div class="campo">
                         <span>E-mail:</span>
@@ -85,15 +78,22 @@
                 <div id="div_aguardar" class="loading-div">
                    
                 </div>
-
-                <div id="div_erros_login"></div>
+                    <div id="div_erros_login"></div>
+                </div>
             </div>
         </div>
-    </div>
 
 
     </div>
     
+
+  </div>
+
+  <!--
+       <div class="invizivel">
+      a
+    </div>
+    -->
 
   </div>
 
@@ -126,13 +126,11 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
-        var cpfVar = cpf_input.value;
-        var telefoneVar = telefone_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || cpfVar == "" || telefoneVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -163,8 +161,6 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
-                cpfServer: cpfVar,
-                telefoneSever: telefoneVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
