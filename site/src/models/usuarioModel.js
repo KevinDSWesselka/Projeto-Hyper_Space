@@ -44,8 +44,17 @@ function cadastrar_resposta(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function paths_controler(id, jedi, sith) {
+    var instrucao = `
+        update usuario set sith_por_cen = ${sith}, jedi_por_cen = ${jedi} where id_usuario = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    paths_controler
 };

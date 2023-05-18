@@ -94,9 +94,22 @@ function cadastrar(req, res) {
     }
 }
 
+function paths_controler(req,res){
+    console.log(req.body);
+    var id = req.body.id;
+    var jedi = req.body.jedi;
+    var sith = req.body.sith;
+    usuarioModel.paths_controler(id,jedi,sith).then((response) =>{
+        console.log(response.json,"Executado")
+    });
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    paths_controler,
+    
 }

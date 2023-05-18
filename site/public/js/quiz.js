@@ -1,225 +1,44 @@
+var id_u = 2;
 var jedi_por_cen = 0;
 var sith_por_cen = 0;
 var contador_quiz = 0;
-var grafico = ``;
+
+function montar_estrutura(titulo, imagem, pergunta1, pergunta2, pergunta3, pergunta4) {
+  return `
+  <div id="container">
+        <h1>HYPER-SPACE</h1>
+        <div class="filtro_quiz">
+          <div class="titulo_quiz">
+            ${titulo}
+          </div>
+        </div>
+          <img class="img_quiz" src="${imagem}" alt="">
+    </div>
+    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
+      ${pergunta1}
+    </div>
+    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+      ${pergunta2}
+    </div>
+    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
+      ${pergunta3}
+    </div>
+    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
+      ${pergunta4}
+    </div>
+  `;
+}
 
 var altera_quiz = [
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://img.elo7.com.br/product/original/2169463/banner-painel-star-wars-3x2m-festa-aniversario.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://i.redd.it/l3fya3oustw41.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://milnersblog.files.wordpress.com/2020/02/star-wars-the-high-republic-light-of-the-jedi-textless-banner.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://meups.com.br/wp-content/uploads/2021/05/Star-Wars-Jedi-Fallen-Order.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2020/07/star-wars-1-scaled.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://wallpapercave.com/wp/1Nyv4Mp.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://cdn.wallpapersafari.com/74/20/u3XqmH.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttAiXd5iyozi0WeGe2oHyzd-8MQVq_jxBcuwZ2RAslq2Yqv0D3BfAQadDQoLHeFDmhEQ&usqp=CAU" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `,
-
-    `
-  <div id="container">
-        <h1>HYPER-SPACE</h1>
-        <div class="filtro_quiz">
-          <div class="titulo_quiz">
-            TITULO QUIZ
-          </div>
-        </div>
-          <img class="img_quiz" src="https://wallpaperaccess.com/full/2828950.jpg" alt="">
-    </div>
-    <div id="opicao_1" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_2" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-    <div id="opicao_3" class="opicao_quiz" onclick="opicao_sith(); proxima_opicao()">
-      Sith
-    </div>
-    <div id="opicao_4" class="opicao_quiz" onclick="opicao_jedi(); proxima_opicao()">
-      Escrevendo texto que talvez possa relamente ser escrito durante o quiz, mas só no tamanho1
-    </div>
-  `
+  montar_estrutura('TITULO QUIZ', 'https://img.elo7.com.br/product/original/2169463/banner-painel-star-wars-3x2m-festa-aniversario.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://i.redd.it/l3fya3oustw41.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://milnersblog.files.wordpress.com/2020/02/star-wars-the-high-republic-light-of-the-jedi-textless-banner.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://meups.com.br/wp-content/uploads/2021/05/Star-Wars-Jedi-Fallen-Order.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2020/07/star-wars-1-scaled.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://wallpapercave.com/wp/1Nyv4Mp.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://cdn.wallpapersafari.com/74/20/u3XqmH.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttAiXd5iyozi0WeGe2oHyzd-8MQVq_jxBcuwZ2RAslq2Yqv0D3BfAQadDQoLHeFDmhEQ&usqp=CAU', 'Sith', 'Jedi', 'Sith', 'Jedi'),
+  montar_estrutura('TITULO QUIZ', 'https://wallpaperaccess.com/full/2828950.jpg', 'Sith', 'Jedi', 'Sith', 'Jedi')
 ]
 
 function opicao_jedi() {
@@ -265,6 +84,7 @@ function proxima_opicao() {
       </div>
       </div>
     `
+    paths_js()
     } else if (contador_quiz == 10 && sith_por_cen > jedi_por_cen) {
         conteudo.innerHTML = `
     <div id="container">
@@ -296,6 +116,7 @@ function proxima_opicao() {
       </div>
       </div>
     `
+    paths_js()
     } else if (contador_quiz == 10 && jedi_por_cen > sith_por_cen) {
         conteudo.innerHTML = `
     <div id="container">
@@ -327,7 +148,22 @@ function proxima_opicao() {
       </div>
       </div>
     `
+    paths_js()
     }
     console.log((sith_por_cen * 10) + "% sith", (jedi_por_cen * 10) + "% jedi");
     console.log((contador_quiz * 10) + "% do quiz completo");
+}
+
+function paths_js(){
+  fetch('/usuarios/paths_route',{
+    method: 'PUT',
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({
+      id: 1,
+      jedi: jedi_por_cen * 10,
+      sith: sith_por_cen * 10,
+    })
+  })
 }

@@ -8,13 +8,14 @@ create table usuario (
 	email varchar(50),
 	senha varchar(50),
     sith_por_cen int,
-    jedi_por_cen int,
-    lado_da_forca char(4),
-    constraint chk_lado_forca check (lado_da_forca in ('jedi', 'sith'))
+	jedi_por_cen int
 );
+select * from usuario;
 
 insert into usuario values 
-	(null, 'Mariana Aguiar de Sousa', 'mari@email.com', '151017', 60, 40, 'sith'),
-	(null, 'Kevin dos Santos Wesselka', 'kevin@email.com', '151017', 70, 30, 'jedi');
+	(null, 'Mariana Aguiar de Sousa', 'mari@email.com', '151017', 60, 40),
+	(null, 'Kevin dos Santos Wesselka', 'kevin@email.com', '151017', 30, 70);
+
+	update usuario set sith_por_cen = 40, jedi_por_cen = 60 where id_usuario = 3;
 
 select * from usuario;
