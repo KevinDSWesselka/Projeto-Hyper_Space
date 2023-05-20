@@ -27,6 +27,10 @@
         <div id="container">
             <h1>HYPER-SPACE</h1>
            <img src="" alt="">
+          <p>
+            <span id="span_lado"></span>
+          </p>
+
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa ratione impedit aperiam, numquam, atque deleniti tempora perferendis accusamus fugit nesciunt laboriosam? Omnis consectetur doloremque blanditiis quam sequi eos aliquam.
            Dolore quo minus assumenda eaque aspernatur nobis eveniet illum qui suscipit eius voluptatem, animi magnam illo architecto. Illum accusantium nulla quod, deleniti excepturi illo debitis voluptas, similique incidunt, numquam quis.
            Delectus non iste nisi dicta fugit suscipit culpa maiores est dignissimos commodi quis assumenda sapiente id debitis, aut deserunt quam fugiat, possimus voluptate ipsam velit corporis accusamus voluptatum. Tempora, nesciunt!
@@ -80,6 +84,23 @@
 
 <script>
 
+  
+  function lado_da_forca() {
+    if (sessionStorage.JEDI > sessionStorage.SITH){
+      span_lado.innerHTML = `Vejo que você tem <span style="color: blue;"> ${sessionStorage.JEDI}% de vocação ao lado JEDI</span>`
+    } else if (sessionStorage.JEDI < sessionStorage.SITH){
+      span_lado.innerHTML = `Vejo que você tem <span style="color: red;"> ${sessionStorage.SITH}% de vocação ao lado SITH</span>`
+    } else if(sessionStorage.JEDI == 'null'){
+      span_lado.innerHTML = `Você ainda não obteve acesso a força! 
+      <a href="./login.html">Click aqui e logue agora</a>`;
+    }else if(sessionStorage.length == 0){
+      span_lado.innerHTML = `Você ainda não obteve acesso a força! 
+      <a href="./login.html">Click aqui e logue agora</a>`;
+    } else {
+      span_lado.innerHTML = `Vejo que você tem <span style="color: gold;"> ${sessionStorage.SITH}% SITH e ${sessionStorage.JEDI}% JEDI, você tem o equilibrio da força </span>`
+    }
+  }
 
+  lado_da_forca()
 
 </script>

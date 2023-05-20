@@ -17,5 +17,3 @@ insert into usuario values
 	(null, 'Kevin dos Santos Wesselka', 'kevin@email.com', '151017', 30, 70);
 
 	update usuario set sith_por_cen = 40, jedi_por_cen = 60 where id_usuario = 3;
-
-select * from usuario;

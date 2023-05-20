@@ -155,15 +155,19 @@ function proxima_opicao() {
 }
 
 function paths_js(){
+  console.log("Id do usuario", sessionStorage.ID_USUARIO,);
   fetch('/usuarios/paths_route',{
     method: 'PUT',
     headers: {
       "Content-Type":"application/json"
     },
     body: JSON.stringify({
-      id: 1,
+      id: sessionStorage.ID_USUARIO,
       jedi: jedi_por_cen * 10,
       sith: sith_por_cen * 10,
     })
   })
+
+  sessionStorage.SITH = sith_por_cen * 10;
+  sessionStorage.JEDI = jedi_por_cen * 10;
 }
