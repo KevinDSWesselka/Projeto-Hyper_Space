@@ -26,7 +26,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter);
 app.use("/personagens", personagensRouter);
-app.use("/curtidas", personagensRouter);
+app.use("/curtidas", curtidasRouter);
 
 
 app.listen(PORTA, function () {

@@ -281,11 +281,11 @@ body{
   border-radius: 100%;
   background-color: rgb(53, 198, 0);
   text-align: center;
-  transition: 1s;
+  transition: .5s;
   cursor: pointer;
 }
 
 .deslike:hover{
-  transition: 1s;
+  transition: .5s;
   background-color: rgb(198, 0, 0);
 }

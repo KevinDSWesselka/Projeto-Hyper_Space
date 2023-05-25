@@ -17,7 +17,6 @@ function pegarPersonagens(req, res) {
         );
 }
 
-
 module.exports = {
     pegarPersonagens    
 }
