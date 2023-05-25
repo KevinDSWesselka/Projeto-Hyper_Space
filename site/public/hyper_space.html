@@ -230,17 +230,13 @@
         })
         spanLike.appendChild(divLike)
 
-        spanContLike.textContent = "fetch"
+        var like = getCurtida(character.id_personagem)
+        spanContLike.textContent = like
 
         spanAll.append(divNome, divImg, divGraficos, divDesc, spanLike, spanContLike)
         descricoes.appendChild(spanAll)
       }
     })
-
-    setTimeout(() => {
-    getCurtida(1)
- 
-    }, 2000);
   }
 
   function likeCharacter(character) {
@@ -254,24 +250,23 @@
         idPersonagem: character.id_personagem,
       })
     }).then(async function (response) {
-      console.log(response.json())
+      const all = await response
+      console.log(all)
     });
   }
 
 
-  function getCurtida(character) {
-    fetch("/curtidas/get-curtida", {
+  function getCurtida(characterId) {
+    fetch(`/curtidas/get-curtida/${sessionStorage.ID_USUARIO}/${characterId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        idUsuario: sessionStorage.ID_USUARIO,
-        idPersonagem: character,
-      })
+      }
     }).then(async function (response) {
       const curtidas = await response.json()
-      console.log(curtidas)
+      console.log(curtidas[0].curtidas)
+      var likes = curtidas[0].curtidas
+      return likes
     });
   }
     

@@ -21,7 +21,7 @@ create table tb_personagem (
 );
 
 create table tb_curtida (
-	id_curtida int,
+	id_curtida int auto_increment,
     fk_personagem int,
     fk_usuario int,
     dt_curtida datetime,
@@ -30,6 +30,7 @@ create table tb_curtida (
     constraint pk_curtida primary key (id_curtida, fk_personagem, fk_usuario)
 );
 drop table tb_curtida;
+select * from tb_curtida; 	
 
 select * from usuario;
 select * from tb_personagem;
@@ -65,5 +66,3 @@ insert into tb_personagem values
 
 insert into tb_curtida values 
 	(1, 1, 1, now());
-
-select * from tb_curtida;

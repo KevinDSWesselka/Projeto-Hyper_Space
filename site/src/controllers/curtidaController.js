@@ -1,8 +1,8 @@
 var curtidaModel = require("../models/curtidaModel");
 
 function getCurtida(req, res) {
-    var idUsuario = req.body.idUsuario;
-    var idPersonagem = req.body.idPersonagem;
+    var idUsuario = req.params.idUsuario;
+    var idPersonagem = req.params.idPersonagem;
     curtidaModel.getCurtida(idUsuario, idPersonagem)
         .then(function (resultado) {
             if (resultado.length > 0) {

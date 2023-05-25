@@ -3,7 +3,7 @@ var router = express.Router();
 
 var curtidaController = require("../controllers/curtidaController");
 
-router.get("/get-curtida", function (req, res) {
+router.get("/get-curtida/:idUsuario/:idPersonagem", function (req, res) {
     curtidaController.getCurtida(req, res)
 })
 
