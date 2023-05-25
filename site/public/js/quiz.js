@@ -1,4 +1,3 @@
-var id_u = 2;
 var jedi_por_cen = 0;
 var sith_por_cen = 0;
 var contador_quiz = 0;
