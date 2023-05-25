@@ -7,4 +7,8 @@ router.get("/get-curtida", function (req, res) {
     curtidaController.getCurtida(req, res)
 })
 
+router.post("/post-curtida", function (req, res) {
+    curtidaController.postCurtida(req, res)
+})
+
 module.exports = router;

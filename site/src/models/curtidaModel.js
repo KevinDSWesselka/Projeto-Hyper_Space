@@ -8,6 +8,15 @@ function getCurtida(idUsuario, idPersonagem) {
     return database.executar(instrucao);
 }
 
+function postCurtida(idUsuario, idPersonagem) {
+    var instrucao = `
+    INSERT INTO tb_curtida (fk_personagem, fk_usuario, dt_curtida) VALUES (${idPersonagem}, ${idUsuario}, now()) 
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
-    getCurtida
+    getCurtida,
+    postCurtida
 };

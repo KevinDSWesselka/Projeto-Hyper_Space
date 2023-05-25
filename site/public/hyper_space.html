@@ -31,19 +31,40 @@
     <div id="container">
       <h1>HYPER-SPACE</h1>
       <img src="" alt="">
-      <p>
+      <p id="descricoes">
         <span id="span_lado"></span>
+<!-- 
 
         <span>
-          <div id="titulo"></div>
-          <div id="img"></div>
-          <div style="width: 470px;" id="grafico"></div>
-          <div id="texto"></div>
-          <span id="like_deslike">
+          <div>
+            <h1>YODA</h1>
+          </div>
+          <div>
+            <img height: 250px;" src="https://amenteemaravilhosa.com.br/wp-content/uploads/2022/01/yoda-1024x598-1.jpg" alt="">
+          </div>
+          <div width: 470px;">
+            <div class="grafico">
+              <h3>Tendencia da Força de CAVALO</h3>
+              <span>20% Jedi</span>
+              <div width: 20%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
+              <span>80% Sith</span>
+              <div width: 80%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+            </div>
+            <div width: 250px;" class="grafico">
+              <h3>Tendencia da Força de antonio</h3>
+              11% Jedi<div width: 11%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
+              89% Sith<div width: 89%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+            </div>
+          </div>
+          <div>
+            <span>texttexto</span>
+          </div>
+          <span >
             <div class="like" onclick="btn_linke()">LIKE</div>
           </span>
-          <span id="span_likes">0</span>
-        </span>
+          <span >0</span>
+          
+        </span> -->
 
       </p>
     </div>
@@ -62,7 +83,7 @@
       </a>
     </div>
     <p>
-      Star Wars - Hyper Space™
+      Star Wars - Hyper Space™ 
     </p>
   </div>
 </body>
@@ -70,38 +91,22 @@
 </html>
 
 <script>
-
+  var descricoes = document.getElementById("descricoes")
   var likes = 0;
-  var idPersonagemAtual = 0;
 
-  function btn_linke(){
-    likes++
+  // function btn_linke(){
+  //   likes++
 
-    span_likes.innerHTML = `${likes}`
-    like_deslike.innerHTML = `<div class="deslike" onclick="btn_deslike()">LIKE</div>`
+  //   span_likes.innerHTML = `${likes}`
+  //   like_deslike.innerHTML = `<div class="deslike" onclick="btn_deslike()">LIKE</div>`
+  // }
 
-      
-    fetch("/curtidas/get-curtida", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-                    idUsuario: sessionStorage.ID_USUARIO,
-                    idPersonagem: idPersonagemAtual,
-          })
-        }).then(async function (response) {
-          var curtida = await response.json()
-          }
-        );
-  } 
+  // function btn_deslike(){
+  //   likes--
 
-  function btn_deslike(){
-    likes--
-
-    span_likes.innerHTML = `${likes}`
-    like_deslike.innerHTML = `<div class="like" onclick="btn_linke()">LIKE</div>`
-  }
+  //   span_likes.innerHTML = `${likes}`
+  //   like_deslike.innerHTML = `<div class="like" onclick="btn_linke()">LIKE</div>`
+  // }
 
   function lado_da_forca() {
     if (sessionStorage.JEDI > sessionStorage.SITH) {
@@ -121,6 +126,32 @@
 
   lado_da_forca()
 
+
+  
+  //   <diisv width: 470px;">
+  //     <diav class="grafico">
+  //       <h3>Tendencia da Força de CAVALO</h3>
+  //       <span>20% Jedi</span>
+  //       <div width: 20%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
+  //       <span>80% Sith</span>
+  //       <div width: 80%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+  //     </diav>
+  //     <diev width: 250px;" class="grafico">
+  //       <h3>Tendencia da Força de antonio</h3>
+  //       11% Jedi<div width: 11%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
+  //       89% Sith<div width: 89%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+  //     </diev>
+  //   </diisv>
+  //   <div>
+  //     <span>texttexto</span>
+  //   </div>
+  //   <span >
+  //     <div class="like" onclick="btn_linke()">LIKE</div>
+  //   </span>
+  //   <span >0</span>
+    
+  // </span>
+
   window.onload = () => {
     fetch("/personagens/pegar_personagens", {
       method: "GET",
@@ -128,30 +159,123 @@
         "Content-Type": "application/json",
       }
     }).then(async function (response) {
-      var characters = await response.json();
+      const characters = await response.json();
       for (let i = 0; i < characters.length; i++) {
-        var character = characters[i]
-        titulo.innerHTML = `<h1>${character.nome_personagem}</h1>`
-        img.innerHTML = `<img style="height: 250px;" src="${character.url_personagem}" alt="">`
-        texto.innerHTML = `<span>${character.desc_texto}</span>`
-        grafico.innerHTML = `
-        <div class="grafico">
-          <h3>Tendencia da Força de ${character.nome_personagem}</h3>
-          ${character.sith_por_cen}% Jedi<div style="width: ${character.sith_por_cen}%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
-          ${character.jedi_por_cen}% Sith<div style="width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-        </div>
-        <div style="widhth: 250px;" class="grafico">
-          <h3>Tendencia da Força de ${sessionStorage.NOME_USUARIO}</h3>
-          ${sessionStorage.SITH}% Jedi<div style="width: ${sessionStorage.SITH}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-          ${sessionStorage.JEDI}% Sith<div style="width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-        </div>
-            `
-        console.log(character)
-        idPersonagemAtual = character.id_personagem;
+        const character = characters[i]
+        var spanAll = document.createElement("span")
+
+        var divNome = document.createElement("div")
+        var h1Nome = document.createElement("h1")
+
+        var divImg = document.createElement("div")
+        var imgImg = document.createElement("img")
+
+        var divGraficos = document.createElement("div")
+
+        var divGrafico1 = document.createElement("div")
+        var h3Tendencia1 = document.createElement("h3")
+        var spanJedi1 = document.createElement("span")
+        var divGrafJedi1 = document.createElement("div")
+        var spanSith1 = document.createElement("span")
+        var divGrafSith1 = document.createElement("div")
+
+        var divGrafico2 = document.createElement("div")
+        var h3Tendencia2 = document.createElement("h3")
+        var spanJedi2 = document.createElement("span")
+        var divGrafJedi2 = document.createElement("div")
+        var spanSith2 = document.createElement("span")
+        var divGrafSith2 = document.createElement("div")
+
+        var divDesc = document.createElement("div")
+        var spanDesc = document.createElement("span")
+
+        var spanLike = document.createElement("span")
+        var divLike = document.createElement("button")
+        var spanContLike = document.createElement("span")
+
+        h1Nome.textContent = character.nome_personagem
+        divNome.appendChild(h1Nome)
+
+        imgImg.src = character.url_personagem
+        imgImg.style.height = "250px"
+        divImg.appendChild(imgImg)
+
+        h3Tendencia1.textContent = `Tendencia da força de ${character.nome_personagem}`
+        spanJedi1.textContent = `${character.jedi_por_cen}% Jedi`
+        divGrafJedi1.style = `width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;`
+        spanSith1.textContent = `${character.sith_por_cen}% Sith`
+        divGrafSith1.style = `width: ${character.sith_por_cen}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;`
+        divGrafico1.className = "grafico"
+        divGrafico1.append(h3Tendencia1, spanJedi1, divGrafJedi1, spanSith1, divGrafSith1)
+
+        h3Tendencia2.textContent = `Tendencia da força de ${sessionStorage.NOME_USUARIO}`
+        spanJedi2.textContent = `${sessionStorage.JEDI}% Jedi`
+        divGrafJedi2.style = `width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;`
+        spanSith2.textContent = `${sessionStorage.SITH}% Sith`
+        divGrafSith2.style = `width: ${sessionStorage.SITH}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;`
+        divGrafico2.className = "grafico"
+        divGrafico2.style.width = "250px"
+        divGrafico2.append(h3Tendencia2, spanJedi2, divGrafJedi2, spanSith2, divGrafSith2)  
+
+        divGraficos.append(divGrafico1, divGrafico2)
+
+        spanDesc.textContent = character.desc_texto;
+        divDesc.appendChild(spanDesc)
+
+        divLike.textContent = "LIKE"
+        divLike.className = "like"
+        divLike.id = character.id_personagem
+        divLike.addEventListener("click", function() {
+          likeCharacter(character)
+        })
+        spanLike.appendChild(divLike)
+
+        spanContLike.textContent = "fetch"
+
+        spanAll.append(divNome, divImg, divGraficos, divDesc, spanLike, spanContLike)
+        descricoes.appendChild(spanAll)
       }
     })
+
+    setTimeout(() => {
+    getCurtida(1)
+ 
+    }, 2000);
   }
 
-  
-  
+  function likeCharacter(character) {
+    fetch("/curtidas/post-curtida", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idUsuario: sessionStorage.ID_USUARIO,
+        idPersonagem: character.id_personagem,
+      })
+    }).then(async function (response) {
+      console.log(response.json())
+    });
+  }
+
+
+  function getCurtida(character) {
+    fetch("/curtidas/get-curtida", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idUsuario: sessionStorage.ID_USUARIO,
+        idPersonagem: character,
+      })
+    }).then(async function (response) {
+      const curtidas = await response.json()
+      console.log(curtidas)
+    });
+  }
+    
+
+
+
 </script>
