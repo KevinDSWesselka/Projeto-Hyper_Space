@@ -114,6 +114,21 @@
     }).then(async function (response) {
       var characters = await response.json();
       for (let i = 0; i < characters.length; i++) {
+
+      fetch("/curtidas/get-curtida", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+                    idUsuario: sessionStorage.ID_USUARIO,
+                    idPersonagem: character.id_personagem,
+          })
+        }).then(async function (response) {
+          var curtida = await response.json()
+          }
+        );
+
         var character = characters[i]
         titulo.innerHTML = `<h1>${character.nome_personagem}</h1>`
         img.innerHTML = `<img style="height: 250px;" src="${character.url_personagem}" alt="">`
@@ -132,6 +147,9 @@
             `
         console.log(character)
       }
-    });
+    })
   }
+
+  
+  
 </script>
