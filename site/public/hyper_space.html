@@ -196,7 +196,7 @@
         var divDesc = document.createElement("div")
         var spanDesc = document.createElement("span")
 
-        //Span botaão Like do Personagem
+        //Span botaão Like do Personagem  
         var spanLike = document.createElement("span")
         var divLike = document.createElement("button")
         var spanContLike = document.createElement("span")
@@ -219,7 +219,7 @@
         divGrafico1.className = "grafico"
         divGrafico1.append(h3Tendencia1, spanJedi1, divGrafJedi1, spanSith1, divGrafSith1)
 
-        //Grafico2 do Personagem
+        //Grafico2 do usuario
         h3Tendencia2.textContent = `Tendencia da força de ${sessionStorage.NOME_USUARIO}`
         spanJedi2.textContent = `${sessionStorage.JEDI}% Jedi`
         divGrafJedi2.style = `width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;`
@@ -241,11 +241,13 @@
         divLike.id = character.id_personagem
         divLike.addEventListener("click", function() {
           likeCharacter(character)
+
+
         })
         spanLike.appendChild(divLike)
 
-        var like = getCurtida(character.id_personagem)
-        spanContLike.textContent = like
+        var like = getCurtida(character.id_personagem, spanContLike)
+        
 
         spanAll.append(divNome, divImg, divGraficos, divDesc, spanLike, spanContLike)
         descricoes.appendChild(spanAll)
@@ -270,7 +272,7 @@
   }
 
 
-  function getCurtida(characterId) {
+  function getCurtida(characterId, span) {
     fetch(`/curtidas/get-curtida/${sessionStorage.ID_USUARIO}/${characterId}`, {
       method: "GET",
       headers: {
@@ -279,8 +281,7 @@
     }).then(async function (response) {
       const curtidas = await response.json()
       console.log(curtidas[0].curtidas)
-      var likes = curtidas[0].curtidas
-      return likes
+      span.textContent = curtidas[0].curtidas
     });
   }
     

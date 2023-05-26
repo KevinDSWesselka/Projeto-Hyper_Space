@@ -24,6 +24,7 @@ create table tb_curtida (
 	id_curtida int auto_increment,
     fk_personagem int,
     fk_usuario int,
+	curtiu boolean,
     dt_curtida datetime,
     constraint fkPersonagem foreign key (fk_personagem) references tb_personagem(id_personagem),
     constraint fkUsuario foreign key (fk_usuario) references usuario(id_usuario),
@@ -78,6 +79,9 @@ Mace Windu é retratado como um dos Jedi mais poderosos de sua época. Sua profi
 
 Além de suas habilidades como guerreiro, Mace Windu é conhecido por sua postura rígida e pela busca constante pela justiça. Ele é um defensor ardente dos princípios Jedi e está disposto a tomar medidas firmes para proteger a galáxia da ameaça do lado sombrio. Sua determinação em enfrentar o mal e sua feroz lealdade aos ensinamentos Jedi muitas vezes o colocam em conflito com outros personagens, especialmente quando se trata de equilibrar a compaixão com a necessidade de agir com severidade.'
 	, 20, 80);
+
+
+delete from tb_curtida where fk_usuario = 2 and fk_personagem = 1;
 
 insert into tb_curtida values 
 	(1, 1, 1, now());
