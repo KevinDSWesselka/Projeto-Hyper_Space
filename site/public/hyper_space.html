@@ -162,16 +162,21 @@
       const characters = await response.json();
       for (let i = 0; i < characters.length; i++) {
         const character = characters[i]
+        //Span de tudo
         var spanAll = document.createElement("span")
 
+        //Div nome do Personagem
         var divNome = document.createElement("div")
         var h1Nome = document.createElement("h1")
 
+        //Div IMG do Personagem
         var divImg = document.createElement("div")
         var imgImg = document.createElement("img")
 
+        //Div Graficos
         var divGraficos = document.createElement("div")
 
+        //Div Grafico1
         var divGrafico1 = document.createElement("div")
         var h3Tendencia1 = document.createElement("h3")
         var spanJedi1 = document.createElement("span")
@@ -179,6 +184,7 @@
         var spanSith1 = document.createElement("span")
         var divGrafSith1 = document.createElement("div")
 
+        //Div Grafico2
         var divGrafico2 = document.createElement("div")
         var h3Tendencia2 = document.createElement("h3")
         var spanJedi2 = document.createElement("span")
@@ -186,20 +192,25 @@
         var spanSith2 = document.createElement("span")
         var divGrafSith2 = document.createElement("div")
 
+        //Div descrição do Personagem
         var divDesc = document.createElement("div")
         var spanDesc = document.createElement("span")
 
+        //Span botaão Like do Personagem
         var spanLike = document.createElement("span")
         var divLike = document.createElement("button")
         var spanContLike = document.createElement("span")
 
+        //Nome do Personagem
         h1Nome.textContent = character.nome_personagem
         divNome.appendChild(h1Nome)
 
+        //IMG do Personagem
         imgImg.src = character.url_personagem
         imgImg.style.height = "250px"
         divImg.appendChild(imgImg)
 
+        //Grafico1 do Personagem
         h3Tendencia1.textContent = `Tendencia da força de ${character.nome_personagem}`
         spanJedi1.textContent = `${character.jedi_por_cen}% Jedi`
         divGrafJedi1.style = `width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;`
@@ -208,6 +219,7 @@
         divGrafico1.className = "grafico"
         divGrafico1.append(h3Tendencia1, spanJedi1, divGrafJedi1, spanSith1, divGrafSith1)
 
+        //Grafico2 do Personagem
         h3Tendencia2.textContent = `Tendencia da força de ${sessionStorage.NOME_USUARIO}`
         spanJedi2.textContent = `${sessionStorage.JEDI}% Jedi`
         divGrafJedi2.style = `width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;`
@@ -219,9 +231,11 @@
 
         divGraficos.append(divGrafico1, divGrafico2)
 
+        //Descrição do Personagem
         spanDesc.textContent = character.desc_texto;
         divDesc.appendChild(spanDesc)
 
+        //BTN like do Personagem
         divLike.textContent = "LIKE"
         divLike.className = "like"
         divLike.id = character.id_personagem
