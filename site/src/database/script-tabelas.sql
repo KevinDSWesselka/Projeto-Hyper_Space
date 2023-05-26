@@ -25,7 +25,7 @@ create table tb_curtida (
     fk_personagem int,
     fk_usuario int,
 	curtiu boolean,
-    dt_curtida datetime,
+    ultima_att datetime,
     constraint fkPersonagem foreign key (fk_personagem) references tb_personagem(id_personagem),
     constraint fkUsuario foreign key (fk_usuario) references usuario(id_usuario),
     constraint pk_curtida primary key (id_curtida, fk_personagem, fk_usuario)

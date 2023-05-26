@@ -266,14 +266,13 @@
         idPersonagem: character.id_personagem,
       })
     }).then(async function (response) {
-      const all = await response
-      console.log(all)
+      
     });
   }
 
 
   function getCurtida(characterId, span) {
-    fetch(`/curtidas/get-curtida/${sessionStorage.ID_USUARIO}/${characterId}`, {
+    fetch(`/curtidas/get-curtida/${characterId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
