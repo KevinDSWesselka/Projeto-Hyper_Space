@@ -1,0 +1,11 @@
+.container_resultado{
+    display: flex;
+}
+
+.img_personagem img{
+    width: 45vw;
+}
+
+.titulo_personagem{
+    margin-bottom: 500px;
+}

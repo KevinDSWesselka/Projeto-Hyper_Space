@@ -21,7 +21,7 @@ function getCurtida(req, res) {
 
 function likeOrDeslike(req, res) {
     var idPersonagem = req.params.idPersonagem;
-    curtidaModel.getCurtida( idPersonagem)
+    curtidaModel.getCurtida(idPersonagem)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -49,7 +49,6 @@ function postCurtida(req, res) {
             }
         }).catch(
             function (erro) {
-                console.log(erro);
                 console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
                 res.status(500).json(erro.sqlMessage);
             }
@@ -59,5 +58,6 @@ function postCurtida(req, res) {
 
 module.exports = {
     getCurtida,
-    postCurtida 
+    postCurtida,
+    likeOrDeslike
 }

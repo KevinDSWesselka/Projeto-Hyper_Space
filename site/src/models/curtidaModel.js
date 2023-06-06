@@ -10,7 +10,7 @@ function getCurtida(idPersonagem) {
 
 function likeOrDeslike(idUsuario, idPersonagem) {
     var instrucao = `
-        logica do update
+    update tb_curtida set curtiu = false where fk_usuario = ${idUsuario} and fk_personagem = ${idPersonagem};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -26,5 +26,6 @@ function postCurtida(idUsuario, idPersonagem) {
 
 module.exports = {
     getCurtida,
-    postCurtida
+    postCurtida,
+    likeOrDeslike
 };

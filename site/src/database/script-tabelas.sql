@@ -21,14 +21,13 @@ create table tb_personagem (
 );
 
 create table tb_curtida (
-	id_curtida int auto_increment,
     fk_personagem int,
     fk_usuario int,
 	curtiu boolean,
     ultima_att datetime,
     constraint fkPersonagem foreign key (fk_personagem) references tb_personagem(id_personagem),
     constraint fkUsuario foreign key (fk_usuario) references usuario(id_usuario),
-    constraint pk_curtida primary key (id_curtida, fk_personagem, fk_usuario)
+    constraint pk_curtida primary key (fk_personagem, fk_usuario)
 );
 drop table tb_personagem;
 drop table tb_curtida;
@@ -78,10 +77,10 @@ insert into tb_personagem values
 Mace Windu é retratado como um dos Jedi mais poderosos de sua época. Sua proficiência no combate com sabre de luz é lendária, e ele domina uma forma de luta exclusiva, conhecida como Vaapad, que incorpora tanto o lado luminoso quanto o lado sombrio da Força. Sua maestria nessa forma de combate demonstra não apenas sua habilidade física, mas também sua compreensão única da complexidade e dualidade da Força.
 
 Além de suas habilidades como guerreiro, Mace Windu é conhecido por sua postura rígida e pela busca constante pela justiça. Ele é um defensor ardente dos princípios Jedi e está disposto a tomar medidas firmes para proteger a galáxia da ameaça do lado sombrio. Sua determinação em enfrentar o mal e sua feroz lealdade aos ensinamentos Jedi muitas vezes o colocam em conflito com outros personagens, especialmente quando se trata de equilibrar a compaixão com a necessidade de agir com severidade.'
-	, 20, 80);
+	, 40, 60);
 
 
-delete from tb_curtida where fk_usuario = 2 and fk_personagem = 1;
+update tb_curtida set curtiu = false where fk_usuario = 2;
 
 insert into tb_curtida values 
 	(1, 1, 1, now());
