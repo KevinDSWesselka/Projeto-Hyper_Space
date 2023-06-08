@@ -135,7 +135,7 @@ color: black;
   margin: 15px 0 0 0;
 }
 
-.grafico{
+#grafico{
   margin: 30px 0 0;
   padding: 18px;
   height: 19vh;
@@ -148,4 +148,12 @@ color: black;
 
 .filtro_img img {
   filter: opacity(40%);
+}
+
+.CharacterAndGrafic{
+  background-color: red;
+}
+
+.CharacterAndGrafic img {
+  width: 10px;
 }

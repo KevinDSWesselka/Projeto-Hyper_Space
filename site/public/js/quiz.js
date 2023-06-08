@@ -76,7 +76,7 @@ function proxima_opicao() {
         Nobis ipsam accusantium, delectus aut totam sint eos aperiam numquam in possimus iste accusamus facilis porro. Corporis consequatur esse distinctio minus rem aspernatur reiciendis impedit possimus? Porro, aut. Nihil, minus!
         <a href="./paths.html">Tente novamente</a>
 
-        <div class="grafico">
+        <div id="grafico">
         <h3>Resultados Graficos</h3>
         ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
         ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
@@ -103,7 +103,7 @@ function proxima_opicao() {
         A busca pelo poder é o princípio central dos Sith. Eles estão dispostos a fazer o que for necessário para obter mais poder, mesmo que isso signifique enganar, trair e subjugar aqueles ao seu redor. Para os Sith, a força bruta e a dominação são meios legítimos para alcançar seus objetivos, independentemente das consequências.
         <a href="./paths.html">Tente novamente</a>
 
-        <div class="grafico">
+        <div id="grafico">
         <h3>Resultados Graficos</h3>
         ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
         ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
@@ -130,7 +130,7 @@ function proxima_opicao() {
         Um dos princípios fundamentais dos Jedi é a defesa e proteção dos outros. Eles veem a si mesmos como guardiões da paz, dedicados a preservar a estabilidade e a segurança. Os Jedi são treinados para usar seus poderes na Força para ajudar os necessitados e lutar contra a injustiça, muitas vezes colocando suas próprias vidas em risco para cumprir sua missão.
         <a href="./paths.html">Tente novamente</a>
 
-        <div class="grafico">
+        <div id="grafico">
         <h3>Resultados Graficos</h3>
         ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
         ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>

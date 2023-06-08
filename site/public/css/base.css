@@ -263,9 +263,9 @@ body{
 }
 
 .like{
-  height: 75px;
-  width: 75px;
-  border-radius: 100%;
+  height: 35px;
+  width: 105px;
+  border-radius: 5%;
   background-color: grey;
   text-align: center;
   transition: 1s;

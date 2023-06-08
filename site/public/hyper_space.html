@@ -17,7 +17,6 @@
     <div class="magin_nav_bar">
 
     </div>
-    yoda
     <div class="nav_bar">
       <ul>
         <li><a href="./index.html">Home</a></li>
@@ -35,8 +34,11 @@
       <p id="descricoes">
         <span id="span_lado"></span>
 
-        </div>
-<!-- 
+      <div id="container_characters">
+
+      </div>
+    </div>
+    <!-- 
 
         <span>
           <div>
@@ -46,14 +48,14 @@
             <img height: 250px;" src="https://amenteemaravilhosa.com.br/wp-content/uploads/2022/01/yoda-1024x598-1.jpg" alt="">
           </div>
           <div width: 470px;">
-            <div class="grafico">
+            <div id="grafico">
               <h3>Tendencia da Força de CAVALO</h3>
               <span>20% Jedi</span>
               <div width: 20%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
               <span>80% Sith</span>
               <div width: 80%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
             </div>
-            <div width: 250px;" class="grafico">
+            <div width: 250px;" id="grafico">
               <h3>Tendencia da Força de antonio</h3>
               11% Jedi<div width: 11%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
               89% Sith<div width: 89%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
@@ -69,8 +71,8 @@
           
         </span> -->
 
-      </p>
-    </div>
+    </p>
+  </div>
   </div>
   <div class="footer">
     <div class="container_footer">
@@ -86,7 +88,7 @@
       </a>
     </div>
     <p>
-      Star Wars - Hyper Space™ 
+      Star Wars - Hyper Space™
     </p>
   </div>
 </body>
@@ -94,22 +96,9 @@
 </html>
 
 <script>
+
   var descricoes = document.getElementById("descricoes")
   var likes = 0;
-
-  // function btn_linke(){
-  //   likes++
-
-  //   span_likes.innerHTML = `${likes}`
-  //   like_deslike.innerHTML = `<div class="deslike" onclick="btn_deslike()">LIKE</div>`
-  // }
-
-  // function btn_deslike(){
-  //   likes--
-
-  //   span_likes.innerHTML = `${likes}`
-  //   like_deslike.innerHTML = `<div class="like" onclick="btn_linke()">LIKE</div>`
-  // }
 
   function lado_da_forca() {
     if (sessionStorage.JEDI > sessionStorage.SITH) {
@@ -118,145 +107,80 @@
       span_lado.innerHTML = `Vejo que você tem <span style="color: red;"> ${sessionStorage.SITH}% de vocação ao lado SITH</span>`
     } else if (sessionStorage.JEDI == 'null') {
       span_lado.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./login.html">Click aqui e logue agora</a>`;
+      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
+
+      grafico.innerHTML = `Você ainda não obteve acesso a força! 
+      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
     } else if (sessionStorage.length == 0) {
       span_lado.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./login.html">Click aqui e logue agora</a>`;
+      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
+
+      grafico.innerHTML = `Você ainda não obteve acesso a força! 
+      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
     } else {
       span_lado.innerHTML = `Vejo que você tem <span style="color: gold;"> ${sessionStorage.SITH}% SITH e ${sessionStorage.JEDI}% JEDI, você tem o equilibrio da força </span>`
     }
   }
-
-  lado_da_forca()
-
-
-  
-  //   <diisv width: 470px;">
-  //     <diav class="grafico">
-  //       <h3>Tendencia da Força de CAVALO</h3>
-  //       <span>20% Jedi</span>
-  //       <div width: 20%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
-  //       <span>80% Sith</span>
-  //       <div width: 80%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-  //     </diav>
-  //     <diev width: 250px;" class="grafico">
-  //       <h3>Tendencia da Força de antonio</h3>
-  //       11% Jedi<div width: 11%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-  //       89% Sith<div width: 89%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-  //     </diev>
-  //   </diisv>
-  //   <div>
-  //     <span>texttexto</span>
-  //   </div>
-  //   <span >
-  //     <div class="like" onclick="btn_linke()">LIKE</div>
-  //   </span>
-  //   <span >0</span>
-    
-  // </span>
 
   window.onload = () => {
     fetch("/personagens/pegar_personagens", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-      }
+      },
     }).then(async function (response) {
       const characters = await response.json();
       for (i = 0; i < characters.length; i++) {
-        const character = characters[i]
-        //Span de tudo
-        var spanAll = document.createElement("span")
+        const character = characters[i];
 
-        //Div nome do Personagem
-        var divNome = document.createElement("div")
-        var h1Nome = document.createElement("h1")
+        var btnContainerId = `btn_container_${character.id_personagem}`; // identificador exclusivo para o contêiner do botão
 
-        //Div IMG do Personagem
-        var divImg = document.createElement("div")
-        var imgImg = document.createElement("img")
+        container_characters.innerHTML += `
+        <span>
+          <div>
+            <h1>${character.nome_personagem}</h1>
+          </div>
+          <div>
+            <img style=" width: 100%; height: 450px;" src="${character.url_personagem}" alt="">
+          </div>
+          
+          <div width: 470px;">
+            <div class="grafico">
+              <h3>Tendencia da Força de ${character.nome_personagem}</h3>
+              <span>${character.jedi_por_cen}% Jedi</span>
+              <div style="width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color: green;"></div>
+              <span>${character.sith_por_cen}% Sith</span>
+              <div style="width: ${character.sith_por_cen}%; height: 30px; margin: 5px; background-color: red;"></div>
+            </div>
+            <div class="grafico">
+              <h3>Tendencia da Força de ${sessionStorage.NOME_USUARIO}</h3>
+              <span>${sessionStorage.JEDI}% Jedi</span>
+              <div style="width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: green;"></div>
+              <span>${sessionStorage.SITH}% Sith</span>
+              <div style="width: ${sessionStorage.SITH}%; height: 30px; margin: 5px; background-color: red;"></div>
+            </div>
+          </div>
 
-        //Div Graficos
-        var divGraficos = document.createElement("div")
+          <div>
+            <button title="Sera contabilizado apenas uma vez!" class="like" onclick="likeCharacter(${character.id_personagem})">Prestar respeito</button>
+            <span id="${btnContainerId}"></span>
+          </div>
 
-        //Div Grafico1
-        var divGrafico1 = document.createElement("div")
-        var h3Tendencia1 = document.createElement("h3")
-        var spanJedi1 = document.createElement("span")
-        var divGrafJedi1 = document.createElement("div")
-        var spanSith1 = document.createElement("span")
-        var divGrafSith1 = document.createElement("div")
 
-        //Div Grafico2
-        var divGrafico2 = document.createElement("div")
-        var h3Tendencia2 = document.createElement("h3")
-        var spanJedi2 = document.createElement("span")
-        var divGrafJedi2 = document.createElement("div")
-        var spanSith2 = document.createElement("span")
-        var divGrafSith2 = document.createElement("div")
+          <div>
+            ${character.desc_texto}
+          </div>
+        </span>
+      `;
 
-        //Div descrição do Personagem
-        var divDesc = document.createElement("div")
-        var spanDesc = document.createElement("span")
-
-        //Span botaão Like do Personagem  
-        var spanLike = document.createElement("span")
-        var divLike = document.createElement("button")
-        var spanContLike = document.createElement("span")
-
-        //Nome do Personagem
-        h1Nome.textContent = character.nome_personagem
-        divNome.appendChild(h1Nome)
-
-        //IMG do Personagem
-        imgImg.src = character.url_personagem
-        imgImg.style.height = "250px"
-        divImg.appendChild(imgImg)
-
-        //Grafico1 do Personagem
-        h3Tendencia1.textContent = `Tendencia da força de ${character.nome_personagem}`
-        spanJedi1.textContent = `${character.jedi_por_cen}% Jedi`
-        divGrafJedi1.style = `width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color: green;`
-        spanSith1.textContent = `${character.sith_por_cen}% Sith`
-        divGrafSith1.style = `width: ${character.sith_por_cen}%; height: 30px; margin: 5px; background-color: red;`
-        divGrafico1.className = "grafico"
-        divGrafico1.append(h3Tendencia1, spanJedi1, divGrafJedi1, spanSith1, divGrafSith1)
-
-        //Grafico2 do usuario
-        h3Tendencia2.textContent = `Tendencia da força de ${sessionStorage.NOME_USUARIO}`
-        spanJedi2.textContent = `${sessionStorage.JEDI}% Jedi`
-        divGrafJedi2.style = `width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color: blue;`
-        spanSith2.textContent = `${sessionStorage.SITH}% Sith`
-        divGrafSith2.style = `width: ${sessionStorage.SITH}%; height: 30px; margin: 5px; background-color: red;`
-        divGrafico2.className = "grafico"
-        divGrafico2.style.width = "250px"
-        divGrafico2.append(h3Tendencia2, spanJedi2, divGrafJedi2, spanSith2, divGrafSith2)  
-
-        divGraficos.append(divGrafico1, divGrafico2)
-
-        //Descrição do Personagem
-        spanDesc.textContent = character.desc_texto;
-        divDesc.appendChild(spanDesc)
-
-        //BTN like do Personagem
-        divLike.textContent = "LIKE"
-        divLike.className = "like"
-        divLike.id = character.id_personagem
-        divLike.addEventListener("click", function() {
-          likeCharacter(character)
-        })
-        spanLike.appendChild(divLike)
-
-        var like = getCurtida(character.id_personagem, spanContLike)
-        
-
-        spanAll.append(divNome, divImg, divGraficos, divDesc, spanLike, spanContLike)
-        descricoes.appendChild(spanAll)
+        getCurtida(character.id_personagem, btnContainerId);
       }
-    })
-  }
+    });
+  };
 
-  function likeCharacter(character) {
+  function likeCharacter(characterId) {
+    alert(`Sua admiração foi feita e não pode ser desfeita...`);
+    window.location.reload();
     fetch("/curtidas/post-curtida", {
       method: "POST",
       headers: {
@@ -264,15 +188,12 @@
       },
       body: JSON.stringify({
         idUsuario: sessionStorage.ID_USUARIO,
-        idPersonagem: character.id_personagem,
-      })
-    }).then(async function (response) {
-      
-    });
+        idPersonagem: characterId,
+      }),
+    }).then(async function (response) { });
   }
 
-
-  function getCurtida(characterId, span) {
+  function getCurtida(characterId, containerId) {
     fetch(`/curtidas/get-curtida/${characterId}`, {
       method: "GET",
       headers: {
@@ -280,12 +201,11 @@
       }
     }).then(async function (response) {
       const curtidas = await response.json()
-      console.log(curtidas[0].curtidas)
-      span.textContent = curtidas[0].curtidas
+      const span = document.getElementById(containerId);
+      span.insertAdjacentHTML('beforeend', `<span class="contador-curtidas">${curtidas[0].curtidas}</span>`);
     });
   }
-    
 
-
+  lado_da_forca()
 
 </script>
