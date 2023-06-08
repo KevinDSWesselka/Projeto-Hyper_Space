@@ -26,6 +26,8 @@ body{
 
 .nav_bar {
     height: 60px;
+    color: rgb(0, 0, 184);
+    color: rgb(220, 0, 0);
     width: 100vw;
     background-color: black;
     transition: 1s;

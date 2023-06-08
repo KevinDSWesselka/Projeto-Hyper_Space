@@ -32,6 +32,7 @@ create table tb_curtida (
 
 drop table tb_curtida;
 drop table tb_personagem;
+drop table usuario;
 
 select * from tb_curtida; 
 select * from tb_personagem;	
@@ -41,8 +42,6 @@ select * from usuario;
 insert into usuario values 
 	(null, 'Mariana Aguiar de Sousa', 'mari@email.com', '151017', 60, 40),
 	(null, 'Kevin dos Santos Wesselka', 'kevin@email.com', '151017', 30, 70);
-
-update usuario set sith_por_cen = 40, jedi_por_cen = 60 where id_usuario = 3;
 
 insert into tb_personagem values 
 	(1, 'Minch Yoda', 'https://static.itapemafm.com.br/s3fs-public/2020-09/MY768.jpg?I6HQJYR0U82dpMo6xQsWzd6KB4cVKpdh', '
@@ -86,9 +85,3 @@ insert into tb_personagem values
 
 	À medida que a guerra galáctica se desenrola, Anakin é seduzido pelo lado sombrio da Força. Ele é manipulado pelo Sith Darth Sidious, que o leva a acreditar que o lado sombrio pode oferecer poder para salvar aqueles que ele ama do sofrimento e da morte. Anakin se volta para o lado sombrio, tornando-se Darth Vader, o icônico vilão da trilogia original.'
 		, 40, 60);
-
-
-update tb_curtida set curtiu = false where fk_usuario = 2;
-
-insert into tb_curtida values 
-	(1, 1, 1, now());

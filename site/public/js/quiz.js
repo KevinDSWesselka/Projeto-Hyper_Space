@@ -78,8 +78,8 @@ function proxima_opicao() {
 
         <div id="grafico">
         <h3>Resultados Graficos</h3>
-        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(0, 0, 184); transition: 2.5s;"></div>
+        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(220, 0, 0);; transition: 2.5s;"></div>
       </div>
       </div>
     `
@@ -105,8 +105,8 @@ function proxima_opicao() {
 
         <div id="grafico">
         <h3>Resultados Graficos</h3>
-        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(0, 0, 184); transition: 2.5s;"></div>
+        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(220, 0, 0);; transition: 2.5s;"></div>
       </div>
       </div>
     `
@@ -132,8 +132,8 @@ function proxima_opicao() {
 
         <div id="grafico">
         <h3>Resultados Graficos</h3>
-        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
+        ${jedi_por_cen * 10}% Jedi<div style="width: ${jedi_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(0, 0, 184); transition: 2.5s;"></div>
+        ${sith_por_cen * 10}% Sith<div style="width: ${sith_por_cen * 10}%; height: 30px; margin: 5px; background-color: rgb(220, 0, 0);; transition: 2.5s;"></div>
       </div>
       </div>
     `
