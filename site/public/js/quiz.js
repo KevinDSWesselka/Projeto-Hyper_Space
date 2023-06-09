@@ -5,7 +5,7 @@ var contador_quiz = 0;
 function montar_estrutura(titulo, imagem, pergunta1, pergunta2, pergunta3, pergunta4) {
   return `
   <div id="container">
-        <h1>HYPER-SPACE</h1>
+        <h1>Paths of the Force</h1>
         <div class="filtro_quiz">
           <div class="titulo_quiz">
             ${titulo}
@@ -41,39 +41,51 @@ var altera_quiz = [
 ]
 
 function opicao_jedi() {
-    jedi_por_cen++
+  jedi_por_cen++
 }
 
 function opicao_sith() {
-    sith_por_cen++
+  sith_por_cen++
 }
-function proxima_opicao() {
-    
-    conteudo.innerHTML = altera_quiz[contador_quiz];
-    contador_quiz++
 
-    if (contador_quiz == 10 && sith_por_cen == jedi_por_cen) {
-        conteudo.innerHTML = `
+function proxima_opicao() {
+
+  conteudo.innerHTML = altera_quiz[contador_quiz];
+  contador_quiz++
+
+  if (contador_quiz == 10 && sith_por_cen == jedi_por_cen) {
+    conteudo.innerHTML = `
     <div id="container">
-        <h1>HYPER-SPACE</h1>
+        <h1>Resultados</h1>
         <div class="filtro_quiz">
           <div class="titulo_quiz">
-            TITULO QUIZ
+          Usuários do equilíbrio da Força transcendem os extremos.
           </div>
         </div>
           <img class="img_quiz" src="https://wallpaperaccess.com/full/353673.jpg" alt="">
           <div class="resposta_final">
-        <h1>balance of the force</h1>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, laboriosam. Corporis ratione placeat impedit delectus consequatur, adipisci aliquam tempore corrupti quibusdam explicabo dolorem officia ut veniam omnis quisquam laborum? Quasi.
-        Eveniet officiis accusantium, dolore tempora explicabo magni, ullam adipisci facilis ducimus eius necessitatibus laudantium. Animi sed sequi officiis voluptatibus aliquid odit consectetur sapiente dolor voluptate repudiandae atque laborum, dignissimos corporis!
-        Nemo porro delectus facere magnam nobis ullam, ea perspiciatis. Ab obcaecati voluptatem dicta. Voluptas sapiente dolor doloremque deleniti commodi earum velit expedita. Officiis, enim illum vel molestias quod a? Odio.
-        Eos eius ipsam tempore enim deserunt maxime nostrum fugit sequi, reprehenderit aliquid nobis! Minus odio, eligendi ad voluptates aperiam deserunt a nemo rem, perferendis repellat beatae cumque architecto laborum atque.
-        Cupiditate ullam est minima. Quod quos ducimus consequuntur repellat aperiam suscipit maiores rerum repudiandae inventore, et voluptatum laudantium molestiae hic accusamus incidunt unde fugiat veniam atque nostrum. Vitae, voluptates nihil.
-        Dignissimos accusantium consequatur, placeat hic dolor eveniet perferendis beatae at aliquam explicabo atque optio molestiae amet temporibus! Neque facere consequatur earum possimus odio quos! Dolor obcaecati placeat explicabo hic expedita.
-        Qui, ea. In atque nemo placeat facilis suscipit distinctio sed blanditiis eum vel exercitationem quisquam, amet at veniam, ad vitae tempora debitis culpa asperiores excepturi aperiam? Voluptas adipisci cum velit?
-        Aperiam quibusdam fuga quia libero earum, nisi ipsam exercitationem consequuntur laboriosam cupiditate doloremque autem assumenda consectetur esse quis, tenetur rem ipsa ad minus quo! Nulla aspernatur corporis voluptatum amet dolore!
-        Nihil ipsa repudiandae illum maiores distinctio, culpa dolore doloremque quam, quae ut autem sed architecto consequatur? Atque impedit delectus enim excepturi mollitia id nihil corporis ex, sapiente doloribus ipsam officia!
-        Nobis ipsam accusantium, delectus aut totam sint eos aperiam numquam in possimus iste accusamus facilis porro. Corporis consequatur esse distinctio minus rem aspernatur reiciendis impedit possimus? Porro, aut. Nihil, minus!
+        <h1>Balance of the force</h1>
+        <p>
+        Os usuários que têm o equilíbrio da Força são indivíduos especiais e raros dentro do universo de Star Wars. Eles são aqueles que conseguem dominar tanto o lado luminoso quanto o lado sombrio da Força, encontrando um equilíbrio entre os dois.
+        </p>
+        <p>
+        Esses usuários são frequentemente referidos como "equilibrados" ou "Grey Jedi" (Jedi Cinza). Eles não se alinham rigidamente com a Ordem Jedi ou com os Sith, mas buscam uma compreensão mais ampla da Força, além das divisões tradicionais entre o bem e o mal.
+        </p>
+        <p>
+        Os usuários do equilíbrio da Força possuem uma visão única e uma perspectiva mais abrangente. Eles reconhecem que tanto o lado luminoso quanto o lado sombrio têm suas vantagens e desvantagens, e procuram usar seus poderes e habilidades de maneira responsável, evitando os extremos.
+        </p>
+        <p>
+        Embora os usuários do equilíbrio da Força sejam raros e possam ser vistos como dissidentes pelos Jedi e Sith, eles têm um papel importante na saga Star Wars. Eles desafiam as convenções estabelecidas e exploram a natureza complexa da Força, questionando as limitações e restrições impostas pelos dogmas Jedi e Sith.
+        </p>
+        <p>
+        Alguns exemplos de personagens que são considerados usuários do equilíbrio da Força incluem Qui-Gon Jinn e Ahsoka Tano. Esses indivíduos procuram seguir seu próprio caminho, tomando decisões com base na intuição e no entendimento pessoal da Força, em vez de aderir estritamente a uma ideologia predefinida.
+        </p>
+        <p>
+        Os usuários do equilíbrio da Força representam a ideia de que o verdadeiro poder vem do equilíbrio interior e do autocontrole. Eles são capazes de resistir às tentações do lado sombrio e usar sua compreensão da Força para promover a paz, a justiça e a harmonia.
+        </p>
+        <p>
+        Em resumo, os usuários do equilíbrio da Força são indivíduos excepcionais que transcendem as limitações das ordens Jedi e Sith, buscando um caminho intermediário e uma compreensão mais ampla da Força. Eles desempenham um papel único na mitologia de Star Wars, desafiando as noções convencionais de bem e mal e explorando a complexidade dessa energia mística.
+        </p>
         <a href="./paths.html">Tente novamente</a>
 
         <div id="grafico">
@@ -84,23 +96,36 @@ function proxima_opicao() {
       </div>
     `
     paths_js()
-    } else if (contador_quiz == 10 && sith_por_cen > jedi_por_cen) {
-        conteudo.innerHTML = `
+  } else if (contador_quiz == 10 && sith_por_cen > jedi_por_cen) {
+    conteudo.innerHTML = `
     <div id="container">
-        <h1>HYPER-SPACE</h1>
+        <h1>Resultados</h1>
         <div class="filtro_quiz">
           <div class="titulo_quiz">
-            TITULO QUIZ
+            No abismo do lado negro, a escuridão revela seu poder sedutor.
           </div>
         </div>
           <img class="img_quiz" src="https://media.moddb.com/images/groups/1/7/6367/swtor-empire-set-by-morie-torwars-343693.jpg" alt="">
           <div class="resposta_final">
         <h1>SITH ORDER</h1>
-        A Ordem Sith é uma antiga e poderosa organização que busca o domínio absoluto e a realização de seus desejos através do poder da Força. Os Sith são conhecidos por seu apego ao lado sombrio da Força e por sua busca incessante pelo poder pessoal.
-        <br>
-        Diferente dos Jedi, os Sith não se limitam pelos conceitos de equilíbrio e harmonia. Eles abraçam suas emoções mais intensas, como raiva, ódio e ambição, utilizando-as como fonte de poder e motivação. Os Sith acreditam que o lado sombrio é a chave para alcançar o verdadeiro potencial na Força.
-        <br>
-        A busca pelo poder é o princípio central dos Sith. Eles estão dispostos a fazer o que for necessário para obter mais poder, mesmo que isso signifique enganar, trair e subjugar aqueles ao seu redor. Para os Sith, a força bruta e a dominação são meios legítimos para alcançar seus objetivos, independentemente das consequências.
+        <p>
+        Os usuários do lado negro da Força são indivíduos que se entregam à corrupção e à escuridão, buscando poder, dominação e autoafirmação a qualquer custo.
+        </p>
+        <p>
+        Esses usuários são conhecidos como Sith, uma ordem de adeptos do lado sombrio que se opõem aos Jedi e abraçam a natureza emocional e passional da Força.
+        </p>
+        <p>
+        Os Sith acreditam que o conflito e o ódio são ferramentas poderosas para moldar a galáxia de acordo com sua vontade. Eles desprezam a ideia de equilíbrio e buscam uma supremacia total, utilizando o medo e a opressão para subjugar os outros.
+        </p>
+        <p>
+        Ao contrário dos Jedi, que procuram viver de acordo com um código de ética e servir ao bem comum, os usuários do lado negro da Força são impulsionados pela ambição pessoal e pelo desejo de controle absoluto. Eles não têm escrúpulos morais e estão dispostos a usar qualquer meio necessário para alcançar seus objetivos, mesmo que isso signifique causar dor e destruição.
+        </p>
+        <p>
+        Os Sith são conhecidos por seus sabres de luz vermelhos, que são criados por corromper cristais de sabre de luz com sua própria energia negra. Esses sabres simbolizam a natureza maligna e distorcida dos Sith.
+        </p>
+        <p>
+        Os usuários do lado negro da Força são retratados como vilões e antagonistas na saga Star Wars, representando a tentação e a perdição que a força sombria pode causar. Eles são um lembrete constante do perigo de ceder às emoções negativas e da importância de manter um equilíbrio entre a luz e a escuridão dentro de si mesmo.
+        </p>
         <a href="./paths.html">Tente novamente</a>
 
         <div id="grafico">
@@ -111,23 +136,36 @@ function proxima_opicao() {
       </div>
     `
     paths_js()
-    } else if (contador_quiz == 10 && jedi_por_cen > sith_por_cen) {
-        conteudo.innerHTML = `
+  } else if (contador_quiz == 10 && jedi_por_cen > sith_por_cen) {
+    conteudo.innerHTML = `
     <div id="container">
-        <h1>HYPER-SPACE</h1>
+        <h1>Resultados</h1>
         <div class="filtro_quiz">
           <div class="titulo_quiz">
-            TITULO QUIZ
+            Portadores da luz, os Jedi são guardiões da paz e da sabedoria.
           </div>
         </div>
           <img class="img_quiz" src="https://i.pinimg.com/originals/86/fe/89/86fe8981b049d62502fed2db5f092ed7.jpg" alt="">
           <div class="resposta_final">
         <h1>JEDI ORDER</h1>
-        A Ordem Jedi é uma antiga e venerada organização de guardiões da paz e da justiça na galáxia. Com uma história rica que remonta a milhares de anos, os Jedi são conhecidos por seus poderes na Força e seu compromisso com a proteção dos indefesos.
-        <br>
-        Os Jedi seguem uma série de princípios que orientam suas ações e sua maneira de viver. O cerne desses princípios é a busca pelo equilíbrio entre o lado claro e o lado sombrio da Força, bem como a promoção da harmonia e do bem-estar na galáxia.
-        <br>
-        Um dos princípios fundamentais dos Jedi é a defesa e proteção dos outros. Eles veem a si mesmos como guardiões da paz, dedicados a preservar a estabilidade e a segurança. Os Jedi são treinados para usar seus poderes na Força para ajudar os necessitados e lutar contra a injustiça, muitas vezes colocando suas próprias vidas em risco para cumprir sua missão.
+        <p>
+        Os usuários do lado Jedi da Força são indivíduos que dedicam suas vidas ao estudo e à prática dos ensinamentos Jedi, em busca de harmonia, sabedoria e paz.
+        </p>
+        <p>
+        Esses usuários são membros da Ordem Jedi, uma organização antiga que promove valores como altruísmo, serenidade e justiça. Os Jedi se esforçam para usar seus poderes e habilidades em prol do bem e da proteção da galáxia.
+        </p>
+        <p>
+        Os Jedi seguem um código de conduta rigoroso, que enfatiza o controle emocional, o autoaperfeiçoamento e o serviço aos outros. Eles buscam equilibrar suas ações e emoções, evitando o uso excessivo ou o abuso da Força.
+        </p>
+        <p>
+        Os Jedi veem a Força como uma energia mística que permeia tudo e todos, e acreditam em seu poder para guiar e iluminar o caminho. Eles dominam a habilidade de usar os sabres de luz, armas elegantes e letais que refletem sua dedicação à causa Jedi.
+        </p>
+        <p>
+        Os usuários do lado Jedi são retratados como heróis na saga Star Wars, defendendo a justiça e a liberdade contra as forças do mal. Eles enfrentam desafios e sacrifícios em nome do bem maior, inspirando esperança e resistência.
+        </p>
+        <p>
+        Os Jedi representam a importância do autocontrole, do discernimento ético e do compromisso com o bem-estar coletivo. Eles são um símbolo de coragem, compaixão e nobreza de espírito, lutando pela paz e pela harmonia na galáxia.
+        </p>
         <a href="./paths.html">Tente novamente</a>
 
         <div id="grafico">
@@ -138,17 +176,17 @@ function proxima_opicao() {
       </div>
     `
     paths_js()
-    }
-    console.log((sith_por_cen * 10) + "% sith", (jedi_por_cen * 10) + "% jedi");
-    console.log((contador_quiz * 10) + "% do quiz completo");
+  }
+  console.log((sith_por_cen * 10) + "% sith", (jedi_por_cen * 10) + "% jedi");
+  console.log((contador_quiz * 10) + "% do quiz completo");
 }
 
-function paths_js(){
+function paths_js() {
   console.log("Id do usuario", sessionStorage.ID_USUARIO,);
-  fetch('/usuarios/paths_route',{
+  fetch('/usuarios/paths_route', {
     method: 'PUT',
     headers: {
-      "Content-Type":"application/json"
+      "Content-Type": "application/json"
     },
     body: JSON.stringify({
       id: sessionStorage.ID_USUARIO,
