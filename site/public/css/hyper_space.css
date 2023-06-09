@@ -9,3 +9,7 @@
 .titulo_personagem{
     margin-bottom: 500px;
 }
+
+.conteudo img {
+    border-radius: 200px;
+}
