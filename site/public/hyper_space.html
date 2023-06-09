@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/hyper_space.css">
   <link rel="shortcut icon"
     href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15134c4c-39a0-4476-8a3f-2c5d96ce27d6/d9b680y-fdeae898-390c-4bd9-b0f7-c48693dd602e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE1MTM0YzRjLTM5YTAtNDQ3Ni04YTNmLTJjNWQ5NmNlMjdkNlwvZDliNjgweS1mZGVhZTg5OC0zOTBjLTRiZDktYjBmNy1jNDg2OTNkZDYwMmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CQxZXahvjoULgcl24xgXrIbQs-KKCo8mrd92vhouwDY" />
+  <script src="./js/hyper_space.js"></script>
   <title>Hyper-Space | Home</title>
 </head>
 
@@ -38,39 +39,6 @@
 
       </div>
     </div>
-    <!-- 
-
-        <span>
-          <div>
-            <h1>YODA</h1>
-          </div>
-          <div>
-            <img height: 250px;" src="https://amenteemaravilhosa.com.br/wp-content/uploads/2022/01/yoda-1024x598-1.jpg" alt="">
-          </div>
-          <div width: 470px;">
-            <div id="grafico">
-              <h3>Tendencia da Força de CAVALO</h3>
-              <span>20% Jedi</span>
-              <div width: 20%; height: 30px; margin: 5px; background-color: green; transition: 2.5s;"></div>
-              <span>80% Sith</span>
-              <div width: 80%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-            </div>
-            <div width: 250px;" id="grafico">
-              <h3>Tendencia da Força de antonio</h3>
-              11% Jedi<div width: 11%; height: 30px; margin: 5px; background-color: blue; transition: 2.5s;"></div>
-              89% Sith<div width: 89%; height: 30px; margin: 5px; background-color: red; transition: 2.5s;"></div>
-            </div>
-          </div>
-          <div>
-            <span>texttexto</span>
-          </div>
-          <span >
-            <div class="like" onclick="btn_linke()">LIKE</div>
-          </span>
-          <span >0</span>
-          
-        </span> -->
-
     </p>
   </div>
   </div>
@@ -94,127 +62,3 @@
 </body>
 
 </html>
-
-<script>
-
-  var descricoes = document.getElementById("descricoes")
-  var likes = 0;
-
-  function lado_da_forca() {
-    if (sessionStorage.JEDI > sessionStorage.SITH) {
-      span_lado.innerHTML = `Vejo que você tem <span style="color: blue;"> ${sessionStorage.JEDI}% de vocação ao lado JEDI</span>`
-    } else if (sessionStorage.JEDI < sessionStorage.SITH) {
-      span_lado.innerHTML = `Vejo que você tem <span style="color: red;"> ${sessionStorage.SITH}% de vocação ao lado SITH</span>`
-    } else if (sessionStorage.JEDI == 'null') {
-      span_lado.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
-
-      grafico.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
-    } else if (sessionStorage.length == 0) {
-      span_lado.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
-
-      grafico.innerHTML = `Você ainda não obteve acesso a força! 
-      <a href="./paths.html">Click aqui e faça a passe pelo teste.</a>`;
-    } else {
-      span_lado.innerHTML = `Vejo que você tem <span style="color: gold;"> ${sessionStorage.SITH}% SITH e ${sessionStorage.JEDI}% JEDI, você tem o equilibrio da força </span>`
-    }
-  }
-
-  window.onload = () => {
-    fetch("/personagens/pegar_personagens", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then(async function (response) {
-      const characters = await response.json();
-      for (i = 0; i < characters.length; i++) {
-        const character = characters[i];
-
-        var btnContainerId = `btn_container_${character.id_personagem}`; // identificador exclusivo para o contêiner do botão
-
-        container_characters.innerHTML += `
-        <p/><br><p/>
-        <span>
-          <div>
-            <h1>${character.nome_personagem}</h1>
-            <br>
-          </div>
-          <div>
-            <img style=" width: 100%; height: 450px;" src="${character.url_personagem}" alt="">
-          </div>
-          
-          <div>
-            <br>
-            <h2>Os paços de ${character.nome_personagem}</h2>
-            <p>
-            <br>
-            ${character.desc_texto}
-            </p>
-            <br>
-          </div>
-        </span>
-          <div width: 470px;">
-            <div class="grafico">
-              <h3>Tendencia da Força de ${character.nome_personagem}</h3>
-              <span>${character.jedi_por_cen}% Jedi</span>
-              <div style="width: ${character.jedi_por_cen}%; height: 30px; margin: 5px; background-color:  rgb(0, 0, 184);"></div>
-              <span>${character.sith_por_cen}% Sith</span>
-              <div style="width: ${character.sith_por_cen}%; height: 30px; margin: 5px; background-color: rgb(220, 0, 0);"></div>
-            </div>
-            <div class="grafico">
-              <h3>Tendencia da Força de ${sessionStorage.NOME_USUARIO}</h3>
-              <span>${sessionStorage.JEDI}% Jedi</span>
-              <div style="width: ${sessionStorage.JEDI}%; height: 30px; margin: 5px; background-color:  rgb(0, 0, 184);"></div>
-              <span>${sessionStorage.SITH}% Sith</span>
-              <div style="width: ${sessionStorage.SITH}%; height: 30px; margin: 5px; background-color: rgb(220, 0, 0);"></div>
-            </div>
-          </div>
-          <br>
-
-          <div>
-            <button title="Sera contabilizado apenas uma vez!" class="like" onclick="likeCharacter(${character.id_personagem})">Prestar respeito</button>
-            <span id="${btnContainerId}">  </span> Prestaram seu respeito
-          </div>
-
-          <p/><br><p/>
-      `;
-
-        getCurtida(character.id_personagem, btnContainerId);
-      }
-    });
-  };
-
-  function likeCharacter(characterId) {
-    alert(`Sua admiração foi feita e não pode ser desfeita...`);
-    window.location.reload();
-    fetch("/curtidas/post-curtida", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        idUsuario: sessionStorage.ID_USUARIO,
-        idPersonagem: characterId,
-      }),
-    }).then(async function (response) { });
-  }
-
-  function getCurtida(characterId, containerId) {
-    fetch(`/curtidas/get-curtida/${characterId}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    }).then(async function (response) {
-      const curtidas = await response.json()
-      const span = document.getElementById(containerId);
-      span.insertAdjacentHTML('beforeend', `<span class="contador-curtidas">${curtidas[0].curtidas}</span>`);
-    });
-  }
-
-  lado_da_forca()
-
-</script>
