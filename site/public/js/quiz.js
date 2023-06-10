@@ -2,6 +2,11 @@ var jedi_por_cen = 0;
 var sith_por_cen = 0;
 var contador_quiz = 0;
 
+if (sessionStorage.length == 0) {
+  alert("Você ainda não obteve acesso a força!")
+  window.location = "./cadastro.html"
+}
+
 function montar_estrutura(titulo, imagem, pergunta1, pergunta2, pergunta3, pergunta4) {
   return `
   <div id="container">
