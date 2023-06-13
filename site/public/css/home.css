@@ -1,0 +1,38 @@
+.conteudo_home{
+    display: flex;
+    margin-bottom: 7rem;
+}
+
+.conteudo_home_reverse{
+    display: flex;
+    margin-bottom: 7rem;
+    flex-direction: row-reverse;
+}
+
+.img_conteudo {
+    height: 420px;
+    width: 420px;
+    border-radius: 90%;
+    transition: 1s;
+}
+
+.img_conteudo img {
+    margin-top: 50px;
+}
+
+
+.img_conteudo:hover {
+    height: 429px;
+    width: 429px;
+    border-radius: 90%;
+    transition: 1s;
+}
+
+.texto_home {
+    margin: 25px;
+}
+
+.texto_home h1 {
+    margin-bottom: 45px;
+    font-size: 35px;
+}
