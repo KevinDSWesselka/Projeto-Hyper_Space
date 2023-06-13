@@ -34,61 +34,59 @@
   </div>
   
 
-  <div id="conteudo_login">
-    <div id="container">
-        
-        <div class="login">
-            <div class="filtro_img_login">
-                <img src="https://images2.alphacoders.com/100/1006252.jpg" alt="">
-        </div>
+<div class = "container-cadastro">
 
-            <div class="alerta_erro">
-                <div class="card_erro" id="cardErro">
-                    <span id="mensagem_erro"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card card-login">
-                    <h2>Bem-vindo!</h2>
-                <div class="formulario">
-
-                    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-
-                    <div class="campo">
-                        <span>Nome:</span>
-                        <input id="nome_input" type="text" placeholder="Seu nome">
-                    </div>
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <div class="campo">
-                        <span>Confirmação da Senha:</span>
-                        <input id="confirmacao_senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
-
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                   
-                </div>
-                    <div id="div_erros_login"></div>
-                </div>
-            </div>
-        </div>
-
-
+    <div class="img">
+        <div class="filtro_img_login">
+            <img src="https://images2.alphacoders.com/100/1006252.jpg" alt="">
+        </div>    
     </div>
+
+    <div class="formulario">
+        <div class="card card-login">
+            <h2>Bem-vindo!</h2>
+        <div class="formulario">
+
+       
+
+            <div class="campo">
+                <span>Nome:</span>
+                <input class="inp_login_cad" id="nome_input" type="text" placeholder="Seu nome">
+            </div>
+            <div class="campo">
+                <span>E-mail:</span>
+                <input class="inp_login_cad" id="email_input" type="text" placeholder="meuemail@provedor.com">
+            </div>
+            <div class="campo">
+                <span>Senha:</span>
+                <input class="inp_login_cad" id="senha_input" type="password" placeholder="******">
+            </div>
+            <div class="campo">
+                <span>Confirmar Senha:</span>
+                <input class="inp_login_cad" id="confirmacao_senha_input" type="password" placeholder="******">
+            </div>
+            <button class="btn_login_cad" onclick="cadastrar()">Cadastrar</button>
+
+        </div>
+        <div id="div_aguardar" class="loading-div">
+           
+        </div>
+            <div id="div_erros_login"></div>
+        </div>
+    </div>
+
+</div>
+
     
 
-  </div>
+
+
+  
+
+
+
+
+  
 
   <!--
        <div class="invizivel">
@@ -115,6 +113,12 @@
       Star Wars - Hyper Space™
     </p>
   </div>
+  
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+    </div>
+</div>
 
 </body>
 
