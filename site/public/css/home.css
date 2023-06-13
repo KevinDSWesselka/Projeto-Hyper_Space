@@ -36,3 +36,14 @@
     margin-bottom: 45px;
     font-size: 35px;
 }
+
+.testo_slider {
+    position: absolute;
+    color: white;
+    margin: 55px;
+    margin-top: 25%;
+}   
+
+.testo_slider p {
+    font-size: 35px;
+}
